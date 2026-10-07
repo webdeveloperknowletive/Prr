@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-prr-primary: #111827;
+  --color-prr-secondary: #ffffff;
+  --color-prr-accent: #C9A96E;
+  --color-prr-bg: #F5F5F3;
+  --color-prr-text: #171717;
+  
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: #F5F5F3;
+    --foreground: #171717;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+  body {
+    @apply bg-prr-bg text-prr-text font-sans antialiased;
+  }
+}

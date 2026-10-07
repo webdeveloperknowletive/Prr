@@ -1,0 +1,231 @@
+:root {
+  /* Brand Palette - Architecture in Motion (Warm, Bright, Editorial) */
+  --color-white: #ffffff;
+  --color-ivory: #FBF9F5;
+  --color-ivory-warm: #F4F1EA;
+  --color-soft-gray: #ECE8E1;
+  --color-concrete-light: #E0DBD2;
+  --color-concrete: #8C877E;
+  
+  /* Text System - Deep Graphite / Charcoal */
+  --color-charcoal: #161616;
+  --color-charcoal-pure: #0E0E0E;
+  --color-charcoal-muted: #484642;
+  --color-charcoal-subtle: #74716A;
+
+  /* Architectural Accents */
+  --color-crimson: #B3131B;
+  --color-crimson-subtle: rgba(179, 19, 27, 0.08);
+  --color-natural-green: #485A4D;
+  --color-soft-sky: #7A93A6;
+
+  /* Typography */
+  --font-family-serif-heading: var(--font-outfit), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-body: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Theme Defaults */
+  --color-text-main: var(--color-charcoal);
+  --color-text-muted: var(--color-charcoal-muted);
+  --color-bg-main: var(--color-ivory);
+  --border-hairline: 1px solid rgba(22, 22, 22, 0.08);
+  --border-subtle: 1px solid rgba(22, 22, 22, 0.14);
+
+  /* Spacing */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4.5rem;
+  --space-xl: 8rem;
+  --space-2xl: 12rem;
+
+  --header-height: 84px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+  overflow-x: hidden;
+  font-family: var(--font-family-body);
+  font-size: 18px; /* High-end magazine readability */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Confident, Large, Editorial Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-serif-heading);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--color-charcoal);
+}
+
+p {
+  line-height: 1.72;
+  font-size: 1.125rem; /* 18px desktop */
+  font-weight: 350;
+  color: var(--color-charcoal-muted);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Red Thread Signature (Used with surgical discipline) */
+.red-thread-marker {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-crimson);
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Continuous PRR Red Thread Section Transition Connectors */
+.red-thread-connector {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.red-thread-connector .thread-stem {
+  width: 1.5px;
+  height: 48px;
+  background: linear-gradient(180deg, var(--color-crimson) 0%, rgba(179, 19, 27, 0.3) 100%);
+}
+
+.red-thread-connector .thread-node {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-crimson);
+  box-shadow: 0 0 12px rgba(179, 19, 27, 0.6);
+}
+
+.red-thread-receiver {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.red-thread-receiver .thread-stem {
+  width: 1.5px;
+  height: 48px;
+  background: linear-gradient(180deg, rgba(179, 19, 27, 0.3) 0%, var(--color-crimson) 100%);
+}
+
+.red-thread-receiver .thread-node {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-crimson);
+  box-shadow: 0 0 12px rgba(179, 19, 27, 0.6);
+}
+
+/* Editorial Category Tag - Elegant, Calm, Never harsh */
+.editorial-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-family-body);
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-charcoal-subtle);
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+
+.editorial-tag::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1.5px;
+  background-color: var(--color-crimson);
+}
+
+/* Spatial Containers */
+.spatial-container {
+  width: 100%;
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 5vw;
+}
+
+/* Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ivory-warm);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-concrete);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-crimson);
+}
+
+/* Lenis */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  html, body {
+    font-size: 16px; /* 16-18px minimum on mobile */
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

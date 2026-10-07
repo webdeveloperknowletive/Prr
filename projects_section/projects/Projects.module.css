@@ -1,0 +1,271 @@
+.projectsMain {
+  min-height: 100vh;
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+  padding-top: var(--header-height);
+}
+
+.container {
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 5vw;
+}
+
+.heroSection {
+  padding: 7rem 0 3rem;
+  border-bottom: 1px solid rgba(22, 22, 22, 0.08);
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.kickerText {
+  font-family: var(--font-family-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-charcoal-muted);
+}
+
+.headline {
+  font-family: var(--font-family-serif-heading);
+  font-size: clamp(3.6rem, 7.5vw, 7.5rem);
+  font-weight: 300;
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+  color: var(--color-charcoal);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.subtext {
+  font-family: var(--font-family-body);
+  font-size: clamp(1.15rem, 1.5vw, 1.4rem);
+  color: var(--color-charcoal-muted);
+  max-width: 780px;
+  line-height: 1.65;
+}
+
+/* Architectural Filter Bar */
+.filtersSection {
+  padding: 2.5rem 0 4rem;
+}
+
+.filterBar {
+  background: #FFFFFF;
+  border: 1px solid rgba(22, 22, 22, 0.1);
+  border-radius: 2px;
+  padding: 1.5rem 2.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filterLabel {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-charcoal-muted);
+  font-weight: 600;
+}
+
+.filterOptions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.filterBtn {
+  font-family: var(--font-family-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(22, 22, 22, 0.12);
+  background: transparent;
+  color: var(--color-charcoal-muted);
+  border-radius: 1px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 500;
+}
+
+.filterBtn:hover {
+  border-color: var(--color-charcoal);
+  color: var(--color-charcoal);
+}
+
+.filterBtnActive {
+  background-color: var(--color-charcoal);
+  border-color: var(--color-charcoal);
+  color: #FFFFFF;
+}
+
+/* Portfolio Grid */
+.portfolioSection {
+  padding-bottom: 8rem;
+}
+
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.projectMonolith {
+  background: #FFFFFF;
+  border: 1px solid rgba(22, 22, 22, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02);
+}
+
+.projectMonolith:hover {
+  transform: translateY(-8px);
+  border-color: rgba(179, 19, 27, 0.4);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+}
+
+.monolithMedia {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--color-ivory-warm);
+}
+
+.monolithVideo, .monolithImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.projectMonolith:hover .monolithVideo,
+.projectMonolith:hover .monolithImage {
+  transform: scale(1.05);
+}
+
+.monolithVignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(22, 22, 22, 0.6) 100%);
+}
+
+.priceTag {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.25rem;
+  font-family: var(--font-family-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  background: rgba(22, 22, 22, 0.75);
+  backdrop-filter: blur(8px);
+  padding: 0.35rem 0.85rem;
+  border-radius: 1px;
+}
+
+.monolithDetails {
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.monolithMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.locBadge {
+  color: var(--color-crimson);
+  font-weight: 600;
+}
+
+.configBadge {
+  color: var(--color-charcoal-muted);
+}
+
+.monolithTitle {
+  font-family: var(--font-family-serif-heading);
+  font-size: 1.85rem;
+  font-weight: 350;
+  color: var(--color-charcoal);
+  line-height: 1.15;
+}
+
+.monolithTagline {
+  font-size: 1rem;
+  color: var(--color-charcoal-muted);
+  line-height: 1.6;
+}
+
+.monolithFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(22, 22, 22, 0.08);
+  padding-top: 1.25rem;
+  margin-top: 0.75rem;
+}
+
+.possession {
+  font-size: 0.85rem;
+  color: var(--color-charcoal-muted);
+}
+
+.viewAction {
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  color: var(--color-crimson);
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: transform 0.2s ease;
+}
+
+.projectMonolith:hover .viewAction {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1200px) {
+  .portfolioGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolioGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .filterBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+}
